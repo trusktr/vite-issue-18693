@@ -1,11 +1,19 @@
 /** @import {UserConfig} from 'vite' */
 
+// Make sure to put the target in all three locations below.
+const target = 'es2022'
+
 /** @type {UserConfig} */
 export default {
   build: {
-    target: 'es2022'
+    target,
   },
   esbuild: {
-    target: 'es2022'
+    target,
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target,
+    }
   }
 }
